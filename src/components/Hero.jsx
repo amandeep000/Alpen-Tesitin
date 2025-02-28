@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import Header from "./Header";
+
 function Hero({ isSummer, toggleSeason }) {
   const summerImages = [
     "/summer/img1.webp",
@@ -41,8 +42,12 @@ function Hero({ isSummer, toggleSeason }) {
           modules={[Navigation, Autoplay, EffectFade]}
           effect="fade"
           loop={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
           className="w-full h-full"
+          fadeEffect={{
+            crossFade: true,
+            fade: 3000,
+          }}
         >
           {imagesToShow.map((img, index) => (
             <SwiperSlide key={index}>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HamburgerMenu from "./HamBtn";
 import SwitchBtn from "./SwitchBtn";
 import logo from "../assets/alpentesitin_logo.svg";
@@ -6,6 +6,7 @@ import LangSelecter from "./LangSelecter";
 import phoneLogo from "../assets/call_24dp_F3F3F3_FILL0_wght400_GRAD0_opsz24.svg";
 
 const Header = ({ isSummer, toggleSeason }) => {
+  const [isSticky, setIsSticky] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const options = [
@@ -13,8 +14,27 @@ const Header = ({ isSummer, toggleSeason }) => {
     { value: "nl", label: "Dutch" },
     { value: "it", label: "Italiano" },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className=" bg-none  pt-[40px] pb-[20px] max-w-[1817px] mx-auto">
+    <div
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isSticky ? "!bg-white shadow-md pt-2 pb-2" : " pt-[40px] pb-[20px]"
+      } max-w-[1817px] mx-auto`}
+    >
       {/* sm and ms screens */}
       <div className="flex justify-between items-center px-[25px] md:px-[100px] ">
         <div className="lg:hidden">

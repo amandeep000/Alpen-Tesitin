@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+h2 {
+  font-family: "sofia-pro-reg";
+}
+p {
+  font-family: "sofia-pro-light";
+}
+body {
+  font-family: "sofia-pro-light", serif;
+  font-optical-sizing: auto;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "sofia-pro-reg";
+  src: url(../public/fonts/Sofia\ Pro\ Regular\ Az.woff);
+}
+@font-face {
+  font-family: "sofia-pro-light";
+  src: url(../public/fonts/Sofia\ Pro\ UltraLight\ Az.woff);
+}
