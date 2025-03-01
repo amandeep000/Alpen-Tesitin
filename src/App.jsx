@@ -3,8 +3,9 @@ import { useState } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Wellness from "./components/Wellness";
-import Services from "./components/Services";
 import Offer from "./components/Offer";
+import Family from "./components/Family";
+import Experiences from "./components/Experiences";
 function App() {
   const [isSummer, setIsSummer] = useState(false);
   const toggleSeason = () => {
@@ -16,7 +17,8 @@ function App() {
       <About />
       <Wellness isSummer={isSummer} />
       <Offer />
-      <Services />
+      <Family />
+      <Experiences isSummer={isSummer} />
     </>
   );
 }

@@ -27,3 +27,23 @@ body {
   font-family: "sofia-pro-light";
   src: url(../public/fonts/Sofia\ Pro\ UltraLight\ Az.woff);
 }
+
+.custom-top-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 30%;
+  background: linear-gradient(to top, rgba(106, 124, 137, 0), #6a7c89);
+}
+
+.custom-bottom-gradient::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 5%;
+  background: linear-gradient(0deg, rgba(237, 236, 233, 0) 0%, #edece9 100%);
+}

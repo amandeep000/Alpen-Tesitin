@@ -1,11 +1,12 @@
-import React from "react";
-import OfferSwiper from "../components/OfferSwiper";
+// import React from "react";
+import OfferSwiper from "./OfferSwiper";
+
 const Offer = () => {
   return (
     <>
-      <div className="w-full h-screen  bg-gradient-to-b  from-[#6a7c8a] to-white mt-20">
-        <div className="p-25 flex justify-center flex-col items-center pt-[80px] md:px-[100px] mb-7 xl:px-[67px] xl:mx-[247px] xl:pt-[135px]">
-          <h3 className="text-[#ffffff] font-sofia-pro-light mb-6 font-semibold text-[32px] px-[20px] ">
+      <div className="relative w-full h-full bg-[#6a7c8a] mt-20 overflow-hidden mb-20">
+        <div className="relative z-10 p-25 flex flex-col items-center h-[450px] pt-[140px] md:px-[100px] mb-5 xl:px-[67px] xl:mx-[247px] xl:pt-[135px]">
+          <h3 className="text-[#ffffff] font-sofia-pro-light mb-6 font-semibold text-[32px] px-[20px]">
             Hotel in Taisten: Offer
           </h3>
           <p className="text-[16px] font-semibold text-[#ffffff] text-center px-[20px] mb-4">
@@ -33,8 +34,20 @@ const Offer = () => {
             </span>
           </button>
         </div>
+        <div className="h-[1300px] bg-cover bg-center custom-top-gradient relative">
+          <div className="absolute -top-32 left-0 w-full">
+            <OfferSwiper />
+          </div>
+          <div
+            className="h-full"
+            style={{
+              backgroundImage: "url('/offer&services.webp')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
+        </div>
       </div>
-      <OfferSwiper />
     </>
   );
 };
