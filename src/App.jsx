@@ -6,6 +6,7 @@ import Wellness from "./components/Wellness";
 import Offer from "./components/Offer";
 import Family from "./components/Family";
 import Experiences from "./components/Experiences";
+import Footer from "./components/Footer";
 function App() {
   const [isSummer, setIsSummer] = useState(false);
   const toggleSeason = () => {
@@ -19,6 +20,7 @@ function App() {
       <Offer />
       <Family />
       <Experiences isSummer={isSummer} />
+      <Footer />
     </>
   );
 }

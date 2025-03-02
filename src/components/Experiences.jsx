@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Admiration from "./Admiration";
 
-const Wellness = ({ isSummer }) => {
+const Experiences = ({ isSummer }) => {
   const summerImages = {
     experience: "/ExperienceSummer/experience.webp",
     carrental: "/ExperienceSummer/carrental.webp",
@@ -104,11 +104,11 @@ const Wellness = ({ isSummer }) => {
           )}
         </div>
       </div>
-      <div className="custom-bottom-gradient custom-bottom-gradient relative">
+      <div className=" lg:h-screen w-full custom-bottom-gradient custom-bottom-gradient relative">
         <Admiration isSummer={isSummer} />
       </div>
     </div>
   );
 };
 
-export default Wellness;
+export default Experiences;

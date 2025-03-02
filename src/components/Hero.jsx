@@ -41,13 +41,10 @@ function Hero({ isSummer, toggleSeason }) {
         <Swiper
           modules={[Navigation, Autoplay, EffectFade]}
           effect="fade"
+          speed={1200}
           loop={true}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           className="w-full h-full"
-          fadeEffect={{
-            crossFade: true,
-            fade: 3000,
-          }}
         >
           {imagesToShow.map((img, index) => (
             <SwiperSlide key={index}>
