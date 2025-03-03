@@ -5,7 +5,7 @@ import logo from "../assets/alpentesitin_logo.svg";
 import LangSelecter from "./LangSelecter";
 import phoneLogo from "../assets/call_24dp_F3F3F3_FILL0_wght400_GRAD0_opsz24.svg";
 
-const Header = ({ isSummer, toggleSeason, isNavOpen }) => {
+const Header = ({ isSummer, toggleSeason, isOpen, setIsOpen }) => {
   const [isSticky, setIsSticky] = useState(false);
 
   const options = [
@@ -37,7 +37,7 @@ const Header = ({ isSummer, toggleSeason, isNavOpen }) => {
       {/* sm and ms screens */}
       <div className="flex justify-between items-center px-[25px] md:px-[100px] ">
         <div className="lg:hidden">
-          <HamburgerMenu />
+          <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
         <div className="flex items-center lg:hidden">
           <img

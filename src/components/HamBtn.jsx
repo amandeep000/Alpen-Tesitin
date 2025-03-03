@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-function HamburgerMenu({ isOpen }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+function HamburgerMenu({ isOpen, setIsOpen }) {
   return (
     <button
       className={`relative w-10 h-10 flex flex-col justify-center items-center `}

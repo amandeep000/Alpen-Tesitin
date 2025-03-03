@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import Header from "./Header";
 
-function Hero({ isSummer, toggleSeason, isNavOpen }) {
+function Hero({ isSummer, toggleSeason, isOpen }) {
   const summerImages = [
     "/summer/img1.webp",
     "/summer/img2.webp",
@@ -38,7 +38,7 @@ function Hero({ isSummer, toggleSeason, isNavOpen }) {
           <Header
             isSummer={isSummer}
             toggleSeason={toggleSeason}
-            isNavOpen={isNavOpen}
+            // isNavOpen={isNavOpen}
           />
         </div>
         <Swiper
