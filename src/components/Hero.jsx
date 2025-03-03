@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
@@ -6,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import Header from "./Header";
 
-function Hero({ isSummer, toggleSeason }) {
+function Hero({ isSummer, toggleSeason, isNavOpen }) {
   const summerImages = [
     "/summer/img1.webp",
     "/summer/img2.webp",
@@ -36,7 +35,11 @@ function Hero({ isSummer, toggleSeason }) {
     <>
       <div className="relative w-screen h-screen overflow-hidden">
         <div className="absolute w-full top-0 left-0 z-20">
-          <Header isSummer={isSummer} toggleSeason={toggleSeason} />
+          <Header
+            isSummer={isSummer}
+            toggleSeason={toggleSeason}
+            isNavOpen={isNavOpen}
+          />
         </div>
         <Swiper
           modules={[Navigation, Autoplay, EffectFade]}

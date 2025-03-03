@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import HamburgerMenu from "./HamBtn";
 import SwitchBtn from "./SwitchBtn";
 import logo from "../assets/alpentesitin_logo.svg";
 import LangSelecter from "./LangSelecter";
 import phoneLogo from "../assets/call_24dp_F3F3F3_FILL0_wght400_GRAD0_opsz24.svg";
 
-const Header = ({ isSummer, toggleSeason }) => {
+const Header = ({ isSummer, toggleSeason, isNavOpen }) => {
   const [isSticky, setIsSticky] = useState(false);
-  const [isNavOpen, setIsNavOpen] = useState(false);
 
   const options = [
     { value: "en", label: "English" },
@@ -31,9 +30,9 @@ const Header = ({ isSummer, toggleSeason }) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`relative top-0 left-0 w-full z-50 transition-all duration-300 ${
         isSticky ? "!bg-white shadow-md pt-2 pb-2" : " pt-[40px] pb-[20px]"
-      } max-w-[1817px] mx-auto`}
+      } max-w-[1440px] mx-auto 2xl:pt-[67px] 2xl:pb-[30px]`}
     >
       {/* sm and ms screens */}
       <div className="flex justify-between items-center px-[25px] md:px-[100px] ">

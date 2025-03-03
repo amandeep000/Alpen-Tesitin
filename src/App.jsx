@@ -9,6 +9,7 @@ import Experiences from "./components/Experiences";
 import Footer from "./components/Footer";
 function App() {
   const [isSummer, setIsSummer] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const toggleSeason = () => {
     setIsSummer(!isSummer);
   };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function HamburgerMenu() {
+function HamburgerMenu({ isOpen }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

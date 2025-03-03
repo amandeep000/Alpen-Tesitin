@@ -105,7 +105,7 @@ const Admiration = ({ isSummer }) => {
               }}
             >
               {/* Slider Content */}
-              <div className="text-white z-10 bottom-[20%] absolute px-[20rem]">
+              <div className="text-white z-10 bottom-[20%] absolute px-[25px] sm:w-full sm:px-[100px] lg:px-[100px]">
                 <h2 className="text-2xl font-bold">
                   {sliderContent[index]?.title || "Title Missing"}
                 </h2>
@@ -119,7 +119,7 @@ const Admiration = ({ isSummer }) => {
       </Swiper>
 
       {/* Custom Pagination */}
-      <div className="absolute bottom-[10%] left-0 w-full flex justify-center items-center px-[20rem]">
+      <div className="absolute bottom-[10%] left-0 w-full flex justify-center items-center px-[25px] sm:px-[100px] lg:px-[100px]">
         <div className="relative flex items-center justify-between w-full mx-auto">
           <div className="absolute top-[50%] translate-y-[-50%] w-full h-[2px] bg-white opacity-70 z-10"></div>
 
