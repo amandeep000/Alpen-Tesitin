@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
-const LangSelecter = ({ options }) => {
+const LangSelecter = ({ options, isHeaderSticky }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
@@ -12,11 +12,15 @@ const LangSelecter = ({ options }) => {
 
   return (
     <div
-      className="relative w-24 cursor-pointer" // Increase the width
+      className="relative w-24 cursor-pointer"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <div className="flex justify-center items-center text-white gap-2">
+      <div
+        className={`flex justify-center items-center ${
+          isHeaderSticky ? "text-gray-800" : "text-white"
+        } gap-2`}
+      >
         <span>{selectedOption.label}</span>
         <ChevronDownIcon
           className={`w-5 h-5 transition-transform duration-500 ${
@@ -25,7 +29,11 @@ const LangSelecter = ({ options }) => {
         />
       </div>
       {isOpen && (
-        <div className="absolute left-0 mt-2 w-full text-white">
+        <div
+          className={`absolute left-0 mt-2 w-full ${
+            isHeaderSticky ? "text-gray-800" : "text-white"
+          }`}
+        >
           {options.map((Option) => (
             <div
               key={Option.value}

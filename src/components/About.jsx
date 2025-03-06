@@ -1,11 +1,11 @@
 const About = () => {
   return (
-    <div className=" lg:max-w-[60rem] mx-auto px-[100px] lg:mt-20 lg:mb-32">
+    <div className=" lg:max-w-[78rem] mx-auto px-[25px] md:px-[100px] pt-[100px] lg:mb-32">
       <div className="flex justify-center items-center mt-8 mb-8 flex-col gap-6  text-center">
-        <h2 className=" text-center text-[43px] text-[#424242] mx-4  lg:text-[43px] leading-tight">
+        <h2 className=" text-center text-[32px] font-openSans leading-1.25 sm:text[35px] text-[#424242] mx-4 leading-tight lg:text-[37px] lg:px-[67px]">
           Alpen Tesitin – your dream 5-star hotel in Val Pusteria/Pustertal
         </h2>
-        <p className="text-center mx-4 text-gray-800">
+        <p className="text-center  text-[15px] leading-[1.7] font-openSans font-normal text-gray-700 lg:text-[17px] lg:px-[67px] lg:mx-0">
           Our{" "}
           <strong className="text-gray-950 ">
             hotel in Val Pusteria/Pustertal

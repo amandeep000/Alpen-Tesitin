@@ -17,7 +17,7 @@ const Wellness = ({ isSummer }) => {
   const contentData = [
     {
       title: "Wellness",
-      paragraph: `A world of spacious pools and soothing saunas, with beauty area, hair salon, and gym, awaits you at our hotel in Welsberg, Taisten.`,
+      paragraph: `A world of and soothing saunas, with beauty area, hair salon, and gym, awaits you at our hotel in Welsberg, Taisten.`,
       image: ImagesToShow.Wellness,
     },
     {
@@ -48,16 +48,16 @@ const Wellness = ({ isSummer }) => {
   );
 
   return (
-    <div className="flex flex-col justify-center items-center px-4 lg:flex-row lg:px-[67px] lg:mx-[84px] lg:h-screen">
-      <ul className="w-full md:px-[100px] lg:w-1/2 lg:px-0 lg:pr-[120px] ">
+    <div className="flex flex-col justify-center items-center px-[25px] md:px-[100px] xl:flex-row lg:[100px] xl:px-[67px] xl:mx-[84px] xl:h-screen text-[#424242]">
+      <ul className="w-full  xl:w-1/2 xl:px-0 xl:pr-[120px] ">
         {contentData.map((item) => (
           <li key={item.title} className="text-[#424242]">
             <h3
-              className={`font-sofia-pro-re font-semibold cursor-pointer p-2 rounded text-[45px] ${
+              className={`font-openSans font-semibold cursor-pointer p-2 rounded text-[30px] ${
                 selectedTitle === item.title
                   ? "opacity-100 cursor-default"
                   : "opacity-50"
-              } mb-1`}
+              } mb-1 xl:text-[40px]`}
               onClick={() => handleTitleClicked(item.title)}
             >
               {item.title}
@@ -65,7 +65,7 @@ const Wellness = ({ isSummer }) => {
             <p
               className={`${
                 selectedContent.title === item.title ? "block" : "hidden"
-              } lg:leading-7 p-2`}
+              } xl:leading-7 p-2`}
             >
               {selectedContent.paragraph}
             </p>
@@ -73,14 +73,14 @@ const Wellness = ({ isSummer }) => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="mt-2 w-full h-auto object-cover lg:hidden"
+                className="mt-2 w-full h-auto object-cover xl:hidden rounded-sm"
               />
             )}
           </li>
         ))}
       </ul>
       {/* for lg screens */}
-      <div className="hidden w-full lg:block lg:w-1/2 lg:h-full">
+      <div className="hidden w-full xl:block xl:w-1/2 xl:h-full">
         {selectedContent && (
           <img
             src={selectedContent.image}

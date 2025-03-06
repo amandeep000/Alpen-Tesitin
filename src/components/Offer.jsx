@@ -4,12 +4,12 @@ import OfferSwiper from "./OfferSwiper";
 const Offer = () => {
   return (
     <>
-      <div className="relative w-full h-full bg-[#6a7c8a] mt-20 overflow-hidden mb-20">
-        <div className="relative z-10 p-25 flex flex-col items-center h-[450px] pt-[140px] md:px-[100px] mb-5 xl:px-[67px] xl:mx-[247px] xl:pt-[135px]">
-          <h3 className="text-[#ffffff] font-sofia-pro-light mb-6 font-semibold text-[32px] px-[20px]">
-            Hotel in Taisten: Offer
+      <div className="relative w-full h-full bg-[#6a7c8a] mt-20 overflow-hidden mb-10">
+        <div className="relative z-10 p-25 flex flex-col items-center h-[450px] pt-[80px] md:px-[100px] mb-5 xl:px-[67px] xl:mx-[247px] xl:pt-[135px]">
+          <h3 className="text-[#ffffff] font-openSans mb-6 font-light tracking-wide text-[32px] px-[25px]">
+            Hotel in Taisten: Offers
           </h3>
-          <p className="text-[16px] font-semibold text-[#ffffff] text-center px-[20px] mb-4">
+          <p className="font-openSans text-[16px] font-normal text-[#ffffff] text-center px-[25px] mb-4 leading-[1.7]">
             Are you longing for a romantic couple’s weekend, an adventure-filled
             family holiday, or simply a getaway amidst nature? Our wide variety
             of offers will put a smile on everyone’s face.

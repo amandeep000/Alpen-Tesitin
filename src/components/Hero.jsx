@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import Header from "./Header";
 
-function Hero({ isSummer, toggleSeason, isOpen }) {
+function Hero({ isSummer, toggleSeason, isOpen, setIsOpen }) {
   const summerImages = [
     "/summer/img1.webp",
     "/summer/img2.webp",
@@ -33,12 +33,19 @@ function Hero({ isSummer, toggleSeason, isOpen }) {
 
   return (
     <>
-      <div className="relative w-screen h-screen overflow-hidden">
+      <div
+        className={`${
+          isOpen ? "opacity-0" : "opacity-100"
+        } relative w-screen h-screen overflow-hidden transition-all duration-500 ease-in-out`}
+      >
         <div className="absolute w-full top-0 left-0 z-20">
           <Header
             isSummer={isSummer}
             toggleSeason={toggleSeason}
-            // isNavOpen={isNavOpen}
+            color={"white"}
+            setIsOpen={setIsOpen}
+            isOpen={isOpen}
+            headerPadding={`pt-[40px] pb-[20px]`}
           />
         </div>
         <Swiper

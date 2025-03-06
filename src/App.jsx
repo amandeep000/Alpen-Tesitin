@@ -22,13 +22,18 @@ function App() {
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />
+      <ResponsiveNav
+        isSummer={isSummer}
+        toggleSeason={toggleSeason}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
       <About />
       <Wellness isSummer={isSummer} />
       <Offer />
       <Family />
       <Experiences isSummer={isSummer} />
       <Footer />
-      <ResponsiveNav isOpen={isOpen} />
     </>
   );
 }

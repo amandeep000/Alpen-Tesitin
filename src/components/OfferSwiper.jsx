@@ -43,12 +43,14 @@ const SwiperComponent = () => {
               alt="Slide 1"
               className="w-full h-auto object-cover rounded-lg"
             />
-            <h3 className="w-full mt-8 text-[#ffffff]">AT Active...</h3>
+            <h3 className="w-full mt-8 text-[#ffffff] text-[22px] mb-[10px]  md:text-[25px]">
+              AT Active...
+            </h3>
             <p className="w-full text-[#ffffff]">
               7 nights with ¾ gourmet board
             </p>
             <p className="w-full text-[#ffffff]">09/02–16/03/2025</p>
-            <button className="text-[15px] w-full text-white flex justify-start items-center gap-2 font-semibold group">
+            <button className="text-[16px] w-full text-white flex justify-start items-center gap-2 font-semibold group pt-[20px]">
               Show All Offers
               <span className=" transition-transform duration-300 group-hover:translate-x-2">
                 ➝
@@ -65,14 +67,16 @@ const SwiperComponent = () => {
               alt="Slide 2"
               className="w-full h-auto object-cover rounded-lg"
             />
-            <h3 className="mt-8 text-white w-full">AT Yoga-and-Balance-Week</h3>
+            <h3 className="mt-8 text-white w-full text-[22px] mb-[10px] md:text-[25px]">
+              AT Yoga-and-Balance-Week
+            </h3>
             <p className="text-[#ffffff] w-full">
               7 nights with ¾ gourmet board
             </p>
             <p className="text-[#ffffff] w-full">
               16/03–23/03/2025 | 23/03–30/03/2025
             </p>
-            <button className="text-[15px] text-[#ffffff] w-full flex justify-start w-full items-center gap-2 font-semibold group">
+            <button className="text-[16px] text-[#ffffff] w-full flex justify-start items-center gap-2 font-semibold group pt-[20px]">
               Show All Offers
               <span className="transition-transform duration-300 group-hover:translate-x-2">
                 ➝
@@ -89,12 +93,14 @@ const SwiperComponent = () => {
               alt="Slide 3"
               className="w-full h-auto object-cover rounded-lg"
             />
-            <h3 className="mt-8 text-[#ffffff] w-full">AT Sun...</h3>
+            <h3 className="mt-8 text-[#ffffff] w-full text-[22px] mb-[10px] md:text-[25px]">
+              AT Sun...
+            </h3>
             <p className="text-[#ffffff] w-full">
               7 nights with ¾ gourmet board
             </p>
             <p className="text-[#ffffff] w-full">16/03–30/03/2025</p>
-            <button className="text-[15px] w-full text-[#ffffff] flex justify-start items-center gap-2 font-semibold group">
+            <button className="text-[16px] w-full text-[#ffffff] flex justify-start items-center gap-2 font-semibold group pt-[20px]">
               Show All Offers
               <span className="transition-transform duration-300 group-hover:translate-x-2">
                 ➝
@@ -109,14 +115,16 @@ const SwiperComponent = () => {
             <img
               src="/offer4.webp"
               alt="Slide 4"
-              className="w-full h-auto object-cover rounded-lg relative"
+              className="w-full h-auto object-cover rounded-lg relative "
             />
-            <h3 className="mt-8 text-[#ffffff] w-full">AT Blossom...</h3>
+            <h3 className="mt-8 text-[#ffffff] w-full text-[22px] md:text-[25px]">
+              AT Blossom...
+            </h3>
             <p className="text-[#ffffff] w-full">
               7 nights with ¾ gourmet board
             </p>
             <p className="text-[#ffffff] w-full">01/05–22/06/2025</p>
-            <button className="text-[15px] w-full text-[#ffffff] flex justify-start items-center gap-2 font-semibold group">
+            <button className="text-[16px] w-full text-[#ffffff] flex justify-start items-center gap-2 font-semibold group pt-[20px]">
               Show All Offers
               <span className="transition-transform duration-300 group-hover:translate-x-2">
                 ➝
