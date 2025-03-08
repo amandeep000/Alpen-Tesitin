@@ -105,7 +105,7 @@ const Admiration = ({ isSummer }) => {
               }}
             >
               {/* Slider Content */}
-              <div className="text-white z-10 bottom-[20%] absolute px-[25px] sm:w-full sm:px-[100px] lg:px-[100px]">
+              <div className="text-white font-openSans z-10 bottom-[20%] absolute px-[25px] sm:w-full sm:px-[100px] lg:px-[100px]">
                 <h2 className="text-2xl font-bold">
                   {sliderContent[index]?.title || "Title Missing"}
                 </h2>

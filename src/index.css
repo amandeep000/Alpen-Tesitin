@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 }
 
@@ -12,7 +13,8 @@ h3 {
   font-family: "openSans", sans-serif;
 }
 body {
-  font-family: "archivo", serif;
+  font-family: "openSans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
   font-optical-sizing: auto;
   overflow-x: hidden;
   background-color: #fdfdfd;

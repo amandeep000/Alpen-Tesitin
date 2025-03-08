@@ -45,7 +45,7 @@ function Hero({ isSummer, toggleSeason, isOpen, setIsOpen }) {
             color={"white"}
             setIsOpen={setIsOpen}
             isOpen={isOpen}
-            headerPadding={`pt-[40px] pb-[20px]`}
+            headerPadding={`pt-[44px] pb-[16px]`}
           />
         </div>
         <Swiper

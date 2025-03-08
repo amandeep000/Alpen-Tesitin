@@ -1,11 +1,27 @@
-// import React from "react";
+import { useEffect } from "react";
 import OfferSwiper from "./OfferSwiper";
+import ScrollReveal from "scrollreveal";
 
 const Offer = () => {
+  useEffect(() => {
+    const sr = ScrollReveal();
+    sr.reveal(".reveal-offer", {
+      duration: 2000,
+      origin: "bottom",
+      distance: "50px",
+      easing: "ease-in-out",
+    });
+    sr.reveal(".reveal-swiper", {
+      duration: 2000,
+      origin: "bottom",
+      distance: "50px",
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <>
       <div className="relative w-full h-full bg-[#6a7c8a] mt-20 overflow-hidden mb-10">
-        <div className="relative z-10 p-25 flex flex-col items-center h-[450px] pt-[80px] md:px-[100px] mb-5 xl:px-[67px] xl:mx-[247px] xl:pt-[135px]">
+        <div className="relative z-10 p-25 reveal-offer flex flex-col items-center h-[450px] pt-[80px] md:px-[100px] mb-5 xl:px-[67px] xl:mx-auto xl:pt-[135px]">
           <h3 className="text-[#ffffff] font-openSans mb-6 font-light tracking-wide text-[32px] px-[25px]">
             Hotel in Taisten: Offers
           </h3>
@@ -34,10 +50,12 @@ const Offer = () => {
             </span>
           </button>
         </div>
-        <div className="h-[1300px] bg-cover bg-center custom-top-gradient relative">
-          <div className="absolute -top-32 left-0 w-full">
+
+        <div className="h-[1300px] bg-cover bg-center custom-top-gradient relative overflow-hidden">
+          <div className="absolute -top-32 left-0 w-full reveal-swiper">
             <OfferSwiper />
           </div>
+
           <div
             className="h-full"
             style={{

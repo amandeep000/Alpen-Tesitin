@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="px-[25px] md:px-[100px] w-full flex flex-1 flex-wrap justify-between items-start gap-10 2xl:px-[85px] max-w-[1440px] 2xl:max-w-[1440px] mx-auto">
+    <div className="px-[25px] text-[#424242] font-openSans mt-8 md:px-[100px] w-full flex flex-1 flex-wrap justify-between items-start gap-10 2xl:px-[85px] max-w-[1440px] 2xl:max-w-[1440px] mx-auto">
       <div className="flex justify-center items-start gap-4 flex-col">
         <div className="flex flex-col justify-center items-start gap-2">
           <h3 className="font-semibold ">
@@ -94,26 +94,26 @@ const Footer = () => {
       </div>
       {/* further links */}
       <div>
-        <h3 className="font-semibold mb-3">Further Links</h3>
-        <p className="cursor-pointer text-slate-900 hover:text-slate-600 transition durat">
+        <h3 className="font-semibold mb-3 ">Further Links</h3>
+        <p className="cursor-pointer text-slate-700 hover:text-slate-600 transition duration-300 font-openSans">
           GuestNet
         </p>
-        <p className="cursor-pointer text-slate-900 hover:text-slate-600 transition durat">
+        <p className="cursor-pointer text-slate-700 hover:text-slate-600 transition duration-300 font-openSans">
           Live
         </p>
-        <p className="cursor-pointer text-slate-900 hover:text-slate-600 transition durat">
+        <p className="cursor-pointer text-slate-700 hover:text-slate-600 transition duration-300 font-openSans">
           Relax
         </p>
-        <p className="cursor-pointer text-slate-900 hover:text-slate-600 transition durat">
+        <p className="cursor-pointer text-slate-700 hover:text-slate-600 transition duration-300 font-openSans">
           Experience
         </p>
-        <p className="cursor-pointer text-slate-900 hover:text-slate-600 transition durat">
+        <p className="cursor-pointer text-slate-700 hover:text-slate-600 transition duration-300 font-openSans">
           Info
         </p>
-        <p className="cursor-pointer text-slate-900 hover:text-slate-600 transition durat">
+        <p className="cursor-pointer text-slate-700 hover:text-slate-600 transition duration-300 font-openSans">
           Belvita
         </p>
-        <p className="cursor-pointer text-slate-900 hover:text-slate-600 transition durat">
+        <p className="cursor-pointer text-slate-700 hover:text-slate-600 transition duration-300 font-openSans">
           Catalogue Request
         </p>
       </div>
@@ -125,7 +125,7 @@ const Footer = () => {
         >
           <label
             htmlFor="newsletter"
-            className="text-start w-full font-semibol pb-2"
+            className="text-start w-full font-semibold pb-2"
           >
             Newsletter
           </label>
@@ -133,14 +133,14 @@ const Footer = () => {
             type="email"
             placeholder="Enter email"
             id="newsletter"
-            className=" outline-none border-b w-full pb-1 mb-1"
+            className=" outline-none border-b w-full pb-1 mb-1 bg-transparent"
           />
-          <button className=" font-semibold py-1 px-6 cursor-pointer rounded-sm bg-slate-300 hover:bg-slate-200 transition duration-300">
+          <button className=" font-semibold py-1 px-6 cursor-pointer rounded-sm text-[#424242] bg-[#FFE5B4] hover:bg-slate-200 transition duration-300">
             Login
           </button>
         </form>
       </div>
-      <div className="my-7 leading-relaxed text-[1rem] font-semibold">
+      <div className="my-7 leading-relaxed text-[1rem] font-latoLight mx-auto font-semibold">
         <p>
           Home | Imprint | Privacy | Privacy settings | Site map | © 2025
           Panorama Wellness Resort Alpen Tesitin | VAT no.: IT01622840211

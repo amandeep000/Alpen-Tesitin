@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Admiration from "./Admiration";
+import ScrollReveal from "scrollreveal";
 
 const Experiences = ({ isSummer }) => {
   const summerImages = {
@@ -51,23 +52,44 @@ const Experiences = ({ isSummer }) => {
     (item) => item.title === selectedTitle
   );
 
+  useEffect(() => {
+    const sr = ScrollReveal();
+    sr.reveal(".reveal-text", {
+      duration: 2000,
+      origin: "bottom",
+      distance: "50px",
+      easing: "ease-in-out",
+    });
+    sr.reveal(".reveal-headings", {
+      duration: 2000,
+      origin: "top",
+      distance: "50px",
+      easing: "ease-in-out",
+    });
+    sr.reveal(".reveal-image", {
+      duration: 2000,
+      origin: "right",
+      distance: "50px",
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <div className="bg-[#edece8] ">
-      <div className="py-[120px] flex justify-center items-center flex-col">
-        <h3 className="text-4xl mb-6">
+      <div className="py-[80px] flex reveal-text justify-center items-center flex-col px-[25px] text-center md:px-[100px] reveal-text">
+        <h3 className="text-[2rem] text-[#424242] leading-relaxed lg:text-[36px] mb-6">
           A holiday at the Alpen Tesitin – the heights of joy
         </h3>
-        <p className="font-semibold">
+        <p className="font-medium text-[15px] font-openSans text-[#424242]">
           Here where majestic peaks touch the sky and nature flourishes in its
           purest form, holiday bliss awaits.
         </p>
       </div>
-      <div className="flex flex-col justify-center items-center pb-20 lg:flex-row lg:px-[67px] lg:mx-[84px] lg:h-screen">
-        <ul className="w-full md:px-[100px] lg:w-1/2 lg:px-0 lg:pr-[120px]">
+      <div className="flex flex-col justify-center items-center xl:py-0 mb-[100px] xl:flex-row xl:px-[57px] xl:mx-[84px] xl:h-[695px]">
+        <ul className="w-full px-[25px] reveal-headings md:px-[100px] xl:w-1/2 xl:px-0 xl:pr-[120px] text-[#424242]">
           {contentData.map((item) => (
             <li key={item.title} className="text-[#424242]">
               <h3
-                className={`font-sofia-pro-re font-semibold cursor-pointer p-2 rounded text-[45px] ${
+                className={`font-openSans font-medium cursor-pointer p-2 rounded text-[30px] xl:text-[40px] ${
                   selectedTitle === item.title
                     ? "opacity-100 cursor-default"
                     : "opacity-50"
@@ -79,7 +101,7 @@ const Experiences = ({ isSummer }) => {
               <p
                 className={`${
                   selectedContent.title === item.title ? "block" : "hidden"
-                } lg:leading-7 p-2`}
+                } font-openSans lg:leading-7 p-2 xl:text-[17px]`}
               >
                 {selectedContent.paragraph}
               </p>
@@ -87,19 +109,19 @@ const Experiences = ({ isSummer }) => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="mt-2 w-full h-auto object-cover lg:hidden object-right-top"
+                  className="mt-2 w-full h-auto object-cover xl:hidden object-right-top rounded-md"
                 />
               )}
             </li>
           ))}
         </ul>
         {/* for lg screens */}
-        <div className="hidden w-full lg:block lg:w-1/2 lg:h-full">
+        <div className="hidden w-full xl:block xl:w-1/2 xl:h-full xl:py-2 reveal-image">
           {selectedContent && (
             <img
               src={selectedContent.image}
               alt={selectedContent.title}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-center object-cover rounded-md"
             />
           )}
         </div>

@@ -1,17 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ScrollReveal from "scrollreveal";
 
 const Wellness = ({ isSummer }) => {
   const summerImages = {
-    Wellness: "/public/WellnessSunner/wellness.webp",
-    architecture: "/public/WellnessSunner/architecture.webp",
-    cuisine: "/public/WellnessSunner/cuisine.webp",
-    panoramic: "/public/WellnessSunner/panaromic.webp",
+    Wellness: "/WellnessSunner/wellness.webp",
+    architecture: "/WellnessSunner/architecture.webp",
+    cuisine: "/WellnessSunner/cuisine.webp",
+    panoramic: "/WellnessSunner/panaromic.webp",
   };
   const winterImages = {
-    Wellness: "/public/WellnessWinter/wellness.webp",
-    architecture: "/public/WellnessWinter/architecture.webp",
-    cuisine: "/public/WellnessWinter/cuisine.webp",
-    panoramic: "/public/WellnessWinter/panoramic.webp",
+    Wellness: "/WellnessWinter/wellness.webp",
+    architecture: "/WellnessWinter/architecture.webp",
+    cuisine: "/WellnessWinter/cuisine.webp",
+    panoramic: "/WellnessWinter/panoramic.webp",
   };
   const ImagesToShow = isSummer ? summerImages : winterImages;
   const contentData = [
@@ -46,12 +47,28 @@ const Wellness = ({ isSummer }) => {
   const selectedContent = contentData.find(
     (item) => item.title === selectedTitle
   );
+  useEffect(() => {
+    const sr = ScrollReveal();
+    sr.reveal(".reveal-headings", {
+      duration: 2000,
+      origin: "bottom",
+      distance: "50px",
+      easing: "ease-in-out",
+    });
+
+    sr.reveal(".reveal-image", {
+      duration: 2000,
+      origin: "right",
+      distance: "50px",
+      easing: "ease-in-out",
+    });
+  }, []);
 
   return (
     <div className="flex flex-col justify-center items-center px-[25px] md:px-[100px] xl:flex-row lg:[100px] xl:px-[67px] xl:mx-[84px] xl:h-screen text-[#424242]">
       <ul className="w-full  xl:w-1/2 xl:px-0 xl:pr-[120px] ">
         {contentData.map((item) => (
-          <li key={item.title} className="text-[#424242]">
+          <li key={item.title} className="text-[#424242] reveal-headings">
             <h3
               className={`font-openSans font-semibold cursor-pointer p-2 rounded text-[30px] ${
                 selectedTitle === item.title
@@ -65,7 +82,7 @@ const Wellness = ({ isSummer }) => {
             <p
               className={`${
                 selectedContent.title === item.title ? "block" : "hidden"
-              } xl:leading-7 p-2`}
+              } xl:leading-7 p-2 font-openSans`}
             >
               {selectedContent.paragraph}
             </p>
@@ -80,12 +97,12 @@ const Wellness = ({ isSummer }) => {
         ))}
       </ul>
       {/* for lg screens */}
-      <div className="hidden w-full xl:block xl:w-1/2 xl:h-full">
+      <div className="hidden w-full xl:block xl:w-1/2 xl:h-full reveal-image py-9 rounded-md">
         {selectedContent && (
           <img
             src={selectedContent.image}
             alt={selectedContent.title}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-md"
           />
         )}
       </div>

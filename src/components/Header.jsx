@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import HamburgerMenu from "./HamBtn";
 import SwitchBtn from "./SwitchBtn";
-import logo from "../assets/alpentesitin_logo.svg";
+import logo from "/alpentesitin_logo.svg";
 import LangSelecter from "./LangSelecter";
 import phoneLogo from "../assets/call_24dp_F3F3F3_FILL0_wght400_GRAD0_opsz24.svg";
 import HotelLogo from "../assets/AlpineLogo.svg";
@@ -43,7 +43,7 @@ const Header = ({
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isSticky ? ` shadow-md pt-2 pb-2` : `${headerPadding}`
-      } w-full mx-auto 2xl:pt-[67px] 2xl:pb-[30px] ${borderBottom}`}
+      } w-full mx-auto 3xl:px-[67px] 3xl:pb-[30px] ${borderBottom}`}
       style={{ backgroundColor: isSticky ? color || "white" : `${bgColor}` }}
     >
       {/* sm and ms screens */}
@@ -59,8 +59,8 @@ const Header = ({
           <img
             src={logo}
             alt="logo"
-            width={150}
-            height={150}
+            width={190}
+            height={190}
             style={{
               filter: `invert(100%) brightness(500%)`,
               backgroundSize: "cover",
@@ -70,7 +70,7 @@ const Header = ({
         </div>
       </div>
       {/* for lg and xl screens */}
-      <div className="hidden lg:block w-full max-w-[1440px] mx-auto">
+      <div className="hidden lg:block w-full max-w-[1920px] mx-auto">
         <div className="flex justify-between items-center px-[60px] ">
           <div className="flex justify-start items-center gap-8 flex-1">
             <HamburgerMenu
@@ -89,8 +89,7 @@ const Header = ({
             <img
               src={isSticky ? HotelLogo : logo}
               alt="logo"
-              width={270}
-              height={270}
+              width={isSticky ? 220 : 400}
               style={{
                 filter: isSticky ? "" : "invert(100%) brightness(500%)",
               }}
