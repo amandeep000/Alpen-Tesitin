@@ -42,9 +42,15 @@ const Header = ({
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isSticky ? ` shadow-md pt-2 pb-2` : `${headerPadding}`
+        isSticky ? `border-b border-gray-200 pt-2 pb-2` : `${headerPadding}`
       } w-full mx-auto 3xl:px-[67px] 3xl:pb-[30px] ${borderBottom}`}
-      style={{ backgroundColor: isSticky ? color || "white" : `${bgColor}` }}
+      style={{
+        backgroundColor: isOpen
+          ? `${bgColor}`
+          : isSticky
+          ? color || "white"
+          : `${bgColor}`,
+      }}
     >
       {/* sm and ms screens */}
       <div className="flex justify-between items-center px-[25px] md:px-[100px] ">
@@ -100,22 +106,24 @@ const Header = ({
               src={phoneLogo}
               alt="call logo svg"
               title="+39 0474 950020"
+              width={40}
+              height={40}
               className={`cursor-pointer ${
                 isSticky ? "filter invert" : "white"
               }`}
             />
             <button
-              className={`px-7 py-2 ${
+              className={`px-7 py-3 ${
                 isSticky ? "bg-[#FFE5B4] text-white" : "bg-white"
-              } text-gray-800 rounded-[2px]`}
+              } text-[#424242] text-xl rounded-[2px]`}
               title="Enquire"
             >
               Enquire
             </button>
             <h3
-              className={` ${
+              className={`text-xl ${
                 isSticky
-                  ? "text-gray-800 hover:text-gray-600"
+                  ? "text-[#424242] hover:text-gray-600"
                   : "text-white hover:text-slate-100"
               }  cursor-pointer `}
               title="Book"

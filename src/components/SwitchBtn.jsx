@@ -9,12 +9,12 @@ function SwitchBtn({ isSummer, toggleSeason, isHeaderSticky }) {
   return (
     <button
       type="button"
-      className={`relative backdrop-blur-sm box-border ${buttonBackgroundClass} flex justify-center items-center w-14 h-7 rounded-full duration-300`}
+      className={`relative backdrop-blur-sm box-border ${buttonBackgroundClass} flex justify-center items-center w-16 h-8 rounded-full duration-300`}
       onClick={toggleSeason}
     >
       <span
-        className={`absolute left-0 top-0 w-7 h-7 bg-white rounded-full transform transition-transform duration-300 ${
-          isSummer ? "translate-x-7" : "translate-x-0"
+        className={`absolute left-0 top-0 w-8 h-8 bg-white rounded-full transform transition-transform duration-300 ${
+          isSummer ? "translate-x-8" : "translate-x-0"
         }`}
       >
         {isSummer ? (

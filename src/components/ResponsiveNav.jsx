@@ -84,7 +84,7 @@ const ResponsiveNav = ({ isOpen, setIsOpen, isSummer, toggleSeason }) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className={`h-screen inset-0 w-screen fixed top-0 left-0 transition-all duration-500 ease-in-out ${
+      className={`h-screen inset-0 w-screen fixed top-0 left-0 transition-all duration-500 z-50 ease-in-out ${
         isOpen ? "opacity-100 translate-y-0" : `opacity-0 -translate-y-full`
       } overflow-hidden`}
     >

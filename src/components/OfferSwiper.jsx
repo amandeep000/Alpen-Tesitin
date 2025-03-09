@@ -20,12 +20,18 @@ const SwiperComponent = () => {
       >
         {[...Array(4)].map((_, index) => (
           <SwiperSlide key={index} className="w-auto">
-            <div className="flex flex-col text-start overflow-x-hidden pl-10">
-              <img
-                src={`/offer${index + 1}.webp`}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
+            <div className="flex flex-col text-start pl-10 overflow-hidden">
+              <div className="overflow-hidden relative">
+                <img
+                  src={`/offer${index + 1}.webp`}
+                  alt={`Slide ${index + 1}`}
+                  className="w-full h-ful  object-cover transition-transform hover:scale-110 transform duration-300 ease-in-out"
+                />
+                <h3 className="absolute bottom-6 left-6 px-6 py-2 text-[#424242] font-openSans text-lg bg-[#ffffff] rounded-[100px]">
+                  From $400 per person
+                </h3>
+              </div>
+
               <h3 className="mt-5 text-white text-[22px] md:text-[25px]">
                 AT{" "}
                 {index === 0
