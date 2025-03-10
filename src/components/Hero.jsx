@@ -36,7 +36,7 @@ function Hero({ isSummer, toggleSeason, isOpen, setIsOpen }) {
       <div
         className={`${
           isOpen ? "opacity-0" : "opacity-100"
-        } relative w-screen h-screen overflow-hidden transition-all duration-500 ease-in-out`}
+        } relative w-screen h-screen overflow-x-hidden transition-all duration-500 ease-in-out`}
       >
         <div className="absolute w-full top-0 left-0 z-20">
           <Header

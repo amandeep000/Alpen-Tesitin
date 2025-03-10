@@ -25,7 +25,7 @@ const SwiperComponent = () => {
                 <img
                   src={`/offer${index + 1}.webp`}
                   alt={`Slide ${index + 1}`}
-                  className="w-full h-ful  object-cover transition-transform hover:scale-110 transform duration-300 ease-in-out"
+                  className="w-full h-ful  object-cover transition-transform hover:scale-110 transform duration-500 ease-in-out"
                 />
                 <h3 className="absolute bottom-6 left-6 px-6 py-2 text-[#424242] font-openSans text-lg bg-[#ffffff] rounded-[100px]">
                   From $400 per person

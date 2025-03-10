@@ -57,11 +57,10 @@ const Offer = () => {
           </div>
 
           <div
-            className="h-full"
+            className="h-full bg-cover bg-center"
             style={{
               backgroundImage: "url('/offer&services.webp')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundAttachment: "fixed",
             }}
           ></div>
         </div>

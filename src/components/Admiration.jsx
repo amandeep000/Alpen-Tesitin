@@ -135,7 +135,8 @@ const Admiration = ({ isSummer }) => {
   justify-content: center;
   width: 12px;
   height: 12px;
-  background-color: rgba(255, 255, 255); /* Solid white background */
+  background-color: rgb(255, 255, 255); 
+  padding:2px;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.3s ease-in-out, background-color 0.3s;
@@ -143,7 +144,7 @@ const Admiration = ({ isSummer }) => {
 
 .custom-bullet:hover,
 .swiper-pagination-bullet-active {
-  background-color: white; 
+  background-color: ##FFE5B4; 
   transform: scale(1.3);
 }
 .swiper-pagination-bullets {

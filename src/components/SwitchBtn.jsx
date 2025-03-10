@@ -1,8 +1,10 @@
 import snowflake from "../assets/snowflake-cold-chilly-frosty-svgrepo-com.svg";
 import sunicon from "../assets/sun-2-svgrepo-com.svg";
 
-function SwitchBtn({ isSummer, toggleSeason, isHeaderSticky }) {
-  const buttonBackgroundClass = isHeaderSticky
+function SwitchBtn({ isSummer, toggleSeason, isHeaderSticky, isOpen }) {
+  const buttonBackgroundClass = isOpen
+    ? "bg-[rgba(255,255,255,0.4)]"
+    : isHeaderSticky
     ? "bg-[#FFE5B4]"
     : "bg-[rgba(255,255,255,0.4)]";
 

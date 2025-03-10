@@ -86,6 +86,7 @@ const Wellness = ({ isSummer }) => {
             >
               {selectedContent.paragraph}
             </p>
+
             {selectedTitle === item.title && (
               <img
                 src={item.image}

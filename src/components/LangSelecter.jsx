@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
-const LangSelecter = ({ options, isHeaderSticky }) => {
+const LangSelecter = ({ options, isHeaderSticky, isOpen: isNavOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
@@ -18,7 +18,11 @@ const LangSelecter = ({ options, isHeaderSticky }) => {
     >
       <div
         className={`flex justify-center items-center ${
-          isHeaderSticky ? "text-[#424242]" : "text-white"
+          isNavOpen
+            ? "text-white"
+            : isHeaderSticky
+            ? "text-[#424242]"
+            : "text-white"
         } gap-2`}
       >
         <span className="text-2xl">{selectedOption.label}</span>
@@ -31,7 +35,11 @@ const LangSelecter = ({ options, isHeaderSticky }) => {
       {isOpen && (
         <div
           className={`absolute left-0 mt-2 w-full ${
-            isHeaderSticky ? "text-[#424242]" : "text-white"
+            isOpen
+              ? "text-white"
+              : isHeaderSticky
+              ? "text-[#424242]"
+              : "text-white"
           }`}
         >
           {options.map((Option) => (
