@@ -41,7 +41,7 @@ const Family = () => {
       {/* Image Container with Fixed Height */}
       <div className="mt-4 h-full flex reveal-image justify-center items-center overflow-hidden order-last xl:w-1/2 rounded-md  xl:order-first xl:h-full xl:pr-[45px]">
         <img
-          src="/public/fetcher.webp"
+          src="/fetcher.webp"
           alt="fetcher family"
           className="w-full h-full object-cover object-center"
         />
