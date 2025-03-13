@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import { useLenis } from "./components/UseLenis";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Wellness from "./components/Wellness";
@@ -12,11 +13,15 @@ import ResponsiveNav from "./components/ResponsiveNav";
 function App() {
   const [isSummer, setIsSummer] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  useLenis();
+
   const toggleSeason = () => {
     setIsSummer(!isSummer);
   };
+
   return (
-    <>
+    <div className="app-container">
       <Hero
         isSummer={isSummer}
         toggleSeason={toggleSeason}
@@ -35,7 +40,7 @@ function App() {
       <Family />
       <Experiences isSummer={isSummer} />
       <Footer />
-    </>
+    </div>
   );
 }
 

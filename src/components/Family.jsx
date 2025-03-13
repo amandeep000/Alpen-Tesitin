@@ -17,7 +17,7 @@ const Family = () => {
     });
   }, []);
   return (
-    <div className="px-[25px] md:px-[100px] mb-20 flex justify-center items-center flex-col xl:flex-row xl:px-[67px] xl:mx-[44px]">
+    <div className="px-[25px] md:px-[100px] mb-20 flex justify-center  items-center flex-col xl:flex-row xl:px-[67px] xl:mx-[44px]">
       <div className="flex flex-col reveal-text items-start justify-center text-[#424242] xl:w-1/2 order-first xl:order-last xl:pl-[45px]">
         <h2 className="font-openSans text-[32px] mb-5 md:text-[36px]">
           Welcome to our place!

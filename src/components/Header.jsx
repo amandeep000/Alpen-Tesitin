@@ -132,7 +132,7 @@ const Header = ({
                 isOpen
                   ? "bg-white"
                   : isSticky
-                  ? "bg-[#FFE5B4] text-white"
+                  ? "bg-[#D24D57] text-white"
                   : "bg-white"
               } text-[#424242] text-xl rounded-[2px]`}
               title="Enquire"

@@ -129,30 +129,30 @@ const Admiration = ({ isSummer }) => {
       </div>
 
       <style>{`
-       .custom-bullet {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 12px;
-  height: 12px;
-  background-color: rgb(255, 255, 255); 
-  padding:2px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, background-color 0.3s;
-}
+  .custom-bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    background-color:#FFFFFF; 
+    padding: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity:0.8;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+  }
 
-.custom-bullet:hover,
-.swiper-pagination-bullet-active {
-  background-color: ##FFE5B4; 
-  transform: scale(1.3);
-}
-.swiper-pagination-bullets {
-  bottom: 0 !important; 
-}
-  
+  .custom-bullet:hover,
+  .swiper-pagination-bullet-active {
+    background-color: #D24D57; 
+    transform: scale(1.3);
+  }
 
-      `}</style>
+  .swiper-pagination-bullets {
+    bottom: 0 !important; 
+  }
+`}</style>
     </div>
   );
 };
