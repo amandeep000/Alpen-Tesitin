@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { useLenis } from "./components/UseLenis";
+import useLenis from "./components/useLenis";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Wellness from "./components/Wellness";

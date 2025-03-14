@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
-export function useLenis() {
+function useLenis() {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -22,3 +22,4 @@ export function useLenis() {
     };
   }, []);
 }
+export default useLenis;
