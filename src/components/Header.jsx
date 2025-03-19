@@ -3,7 +3,6 @@ import HamburgerMenu from "./HamBtn";
 import SwitchBtn from "./SwitchBtn";
 import logo from "/alpentesitin_logo.svg";
 import LangSelecter from "./LangSelecter";
-import phoneLogo from "../assets/call_24dp_F3F3F3_FILL0_wght400_GRAD0_opsz24.svg";
 import HotelLogo from "../assets/AlpineLogo.svg";
 
 const Header = ({
@@ -68,7 +67,7 @@ const Header = ({
             width={190}
             height={190}
             style={{
-              filter: `invert(100%) brightness(500%)`,
+              filter: isSticky ? "" : `invert(100%) brightness(500%)`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -132,7 +131,7 @@ const Header = ({
                 isOpen
                   ? "bg-white"
                   : isSticky
-                  ? "bg-[#D24D57] text-white"
+                  ? "bg-[#a79e93] text-white"
                   : "bg-white"
               } text-[#424242] text-xl rounded-[2px]`}
               title="Enquire"

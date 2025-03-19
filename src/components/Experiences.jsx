@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import Admiration from "./Admiration";
 import ScrollReveal from "scrollreveal";
 
@@ -73,8 +74,13 @@ const Experiences = ({ isSummer }) => {
       easing: "ease-in-out",
     });
   }, []);
+
+  // Framer Motion scroll-based animation
+  const { scrollY } = useScroll();
+  const parallaxY = useTransform(scrollY, [0, 500], [0, -100]);
+
   return (
-    <div className="bg-[#edece8] ">
+    <div className="bg-[#edece8]">
       <div className="py-[80px] flex reveal-text justify-center items-center flex-col px-[25px] text-center md:px-[100px] reveal-text">
         <h3 className="text-[2rem] text-[#424242] leading-relaxed lg:text-[36px] mb-6">
           A holiday at the Alpen Tesitin – the heights of joy
@@ -146,7 +152,20 @@ const Experiences = ({ isSummer }) => {
           )}
         </div>
       </div>
-      <div className=" lg:h-screen w-full custom-bottom-gradient custom-bottom-gradient relative">
+      <div
+        style={{ y: parallaxY }}
+        className="absolute inset-0 w-full h-screen bg-cover bg-center"
+      >
+        <img
+          src={
+            isSummer ? "/ExperienceSummer/bg.webp" : "/ExperienceWinter/bg.webp"
+          }
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="relative lg:h-screen w-full custom-bottom-gradient">
         <Admiration isSummer={isSummer} />
       </div>
     </div>

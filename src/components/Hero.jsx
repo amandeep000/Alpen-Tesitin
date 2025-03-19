@@ -53,7 +53,7 @@ function Hero({ isSummer, toggleSeason, isOpen, setIsOpen }) {
           effect="fade"
           speed={1200}
           loop={true}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 6000, disableOnInteraction: false }}
           className="w-full h-full"
         >
           {imagesToShow.map((img, index) => (

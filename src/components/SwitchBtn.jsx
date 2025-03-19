@@ -5,7 +5,7 @@ function SwitchBtn({ isSummer, toggleSeason, isHeaderSticky, isOpen }) {
   const buttonBackgroundClass = isOpen
     ? "bg-[rgba(255,255,255,0.4)]"
     : isHeaderSticky
-    ? "bg-[#D24D57]"
+    ? "bg-[#e3e1dd]"
     : "bg-[rgba(255,255,255,0.4)]";
 
   return (

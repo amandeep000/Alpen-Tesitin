@@ -45,6 +45,7 @@ const ResponsiveNav = ({ isOpen, setIsOpen, isSummer, toggleSeason }) => {
       ],
     },
   ];
+  const imgTitles = [, "", "", ""];
 
   const [selectedTitle, setSelectedTitle] = useState(null);
 
@@ -61,10 +62,10 @@ const ResponsiveNav = ({ isOpen, setIsOpen, isSummer, toggleSeason }) => {
   }, []);
 
   const slides = [
-    { id: 1, text: "Google", image: "/nav-1.webp" },
-    { id: 2, text: "Facebook", image: "/nav-2.webp" },
-    { id: 3, text: "Twitter", image: "/nav-3.webp" },
-    { id: 4, text: "LinkedIn", image: "/nav-4.webp" },
+    { id: 1, text: "Rooms & Suites", image: "/nav-1.webp" },
+    { id: 2, text: "World of Relaxation", image: "/nav-2.webp" },
+    { id: 3, text: "Culinary Journeys", image: "/nav-3.webp" },
+    { id: 4, text: "Active Adventures", image: "/nav-4.webp" },
   ];
 
   useEffect(() => {
@@ -172,13 +173,19 @@ const ResponsiveNav = ({ isOpen, setIsOpen, isSummer, toggleSeason }) => {
                   href={slide.url}
                   target="_blank"
                   rel="#"
-                  className=" w-full sm:h-[15rem] md:h-[132px] lg:h-full flex items-center justify-center text-xl font-bold rounded-lg mx-6 md:mx-[100px] bg-slate-500"
+                  className="w-full md:h-[132px] lg:h-full flex items-center justify-center text-xl font-bold rounded-lg mx-6 md:mx-[100px] bg-slate-500"
                 >
-                  <img
-                    src={slide.image}
-                    alt={slides.text}
-                    className="object-cover object-center"
-                  />
+                  <div className="relative before:absolute before:content-[''] before:bg-black/40 before:inset-0">
+                    <img
+                      src={slide.image}
+                      alt={slides.text}
+                      width={574}
+                      className=" object-cover object-center"
+                    />
+                    <h3 className="absolute bottom-2.5 left-5 text-[#ffffff] text-[18px]">
+                      {slide.text}
+                    </h3>
+                  </div>
                 </a>
               </SwiperSlide>
             ))}

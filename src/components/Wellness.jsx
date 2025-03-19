@@ -47,6 +47,7 @@ const Wellness = ({ isSummer }) => {
   const selectedContent = contentData.find(
     (item) => item.title === selectedTitle
   );
+
   useEffect(() => {
     const sr = ScrollReveal();
     sr.reveal(".reveal-headings", {
@@ -66,11 +67,11 @@ const Wellness = ({ isSummer }) => {
 
   return (
     <div className="flex flex-col justify-center items-center px-[25px] md:px-[100px] xl:flex-row lg:[100px] xl:px-[67px] xl:mx-[84px] xl:h-screen text-[#424242]">
-      <ul className="w-full  xl:w-1/2 xl:px-0 xl:pr-[120px] ">
+      <ul className="w-full xl:w-1/2 xl:px-0 xl:pr-[120px] transition-all duration-500 ease-in-out">
         {contentData.map((item) => (
           <li key={item.title} className="text-[#424242] reveal-headings">
             <h3
-              className={`font-openSans font-semibold cursor-pointer p-2 rounded text-[30px] ${
+              className={`font-openSans font-semibold cursor-pointer p-2 rounded text-[30px] transition-all duration-500 ease-in-out ${
                 selectedTitle === item.title
                   ? "opacity-100 cursor-default"
                   : "opacity-50"
@@ -80,8 +81,10 @@ const Wellness = ({ isSummer }) => {
               {item.title}
             </h3>
             <p
-              className={`${
-                selectedContent.title === item.title ? "block" : "hidden"
+              className={`transition-opacity duration-500 ease-in-out ${
+                selectedContent.title === item.title
+                  ? "opacity-100 block"
+                  : "opacity-0 hidden"
               } xl:leading-7 p-2 font-openSans`}
             >
               {selectedContent.paragraph}
@@ -91,7 +94,7 @@ const Wellness = ({ isSummer }) => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="mt-2 w-full h-auto object-cover xl:hidden rounded-sm"
+                className="mt-2 w-full h-auto object-cover xl:hidden rounded-sm transition-opacity duration-500 ease-in-out"
               />
             )}
           </li>
@@ -103,7 +106,7 @@ const Wellness = ({ isSummer }) => {
           <img
             src={selectedContent.image}
             alt={selectedContent.title}
-            className="h-full w-full object-cover rounded-md"
+            className="h-full w-full object-cover rounded-md transition-opacity duration-500 ease-in-out"
           />
         )}
       </div>
