@@ -16,7 +16,7 @@ function Hero({ isSummer, toggleSeason, isOpen, setIsOpen }) {
       <div
         className={`${
           isOpen ? "opacity-0" : "opacity-100"
-        } relative w-full h-screen overflow-hidden transition-all duration-500 ease-in-out`}
+        } relative w-full h-full overflow-hidden transition-all duration-500 ease-in-out`}
       >
         <div className="absolute w-full top-0 left-0 z-20">
           <Header
@@ -25,7 +25,7 @@ function Hero({ isSummer, toggleSeason, isOpen, setIsOpen }) {
             color={"white"}
             setIsOpen={setIsOpen}
             isOpen={isOpen}
-            headerPadding={`pt-[44px] pb-[16px]`}
+            headerPadding={`pt-[20px] pb-[16px]`}
           />
         </div>
         <Swiper
@@ -40,7 +40,7 @@ function Hero({ isSummer, toggleSeason, isOpen, setIsOpen }) {
           {[1, 2].map((index) => (
             <SwiperSlide key={`${videoToShow}-${index}`}>
               <video
-                className="w-full h-screen object-cover"
+                className="w-full h-full lg:h-screen object-cover"
                 autoPlay
                 loop
                 muted

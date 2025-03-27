@@ -13,7 +13,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="lg:max-w-[78rem] mx-auto px-[25px] md:px-[100px] pt-[100px] lg:mb-32 reveal-text">
+    <div className="lg:max-w-[78rem] mx-auto px-[25px] md:px-[100px] lg:mb-32 reveal-text">
       <div className="flex justify-center items-center mt-8 mb-8 flex-col gap-6 text-center">
         <h2 className="reveal-text text-center text-[32px] font-openSans leading-1.25 sm:text[35px] text-[#424242] mx-4 leading-tight lg:text-[37px] lg:px-[67px]">
           Alpen Tesitin – your dream 5-star hotel in Val Pusteria/Pustertal
